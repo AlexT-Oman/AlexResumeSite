@@ -1,0 +1,230 @@
+/* Resetting default margin and using a common font family */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Creating a grid layout for the main sections of the page */
+.maingrid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+/* Styling the footer at the bottom of the page to ensure it sticks to the bottom */
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+/* Styling the navbar at the top of the page to ensure it sticks to the top */
+.navbar{
+    position: fixed;
+    width: 100%;
+}
+
+/* Styling common to both navbar and footer */
+.navbar,
+footer {
+    background-color: #164863;
+    color: #DDF2FD;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for navigation links and logo inside the navbar */
+nav,
+footer {
+    display: flex;
+    align-items: center;
+    padding-left: 18rem;
+    /* Adjusted padding for desktop screens */
+}
+
+/* Styling for links inside the navbar */
+nav a {
+    color: #DDF2FD;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+/* Changing the color of links on hover in the navbar */
+nav a:hover {
+    color: #427D9D;
+}
+
+/* Adding margin to the right of divs inside the navbar and footer */
+.navbar div,
+footer div {
+    margin-right: 18rem;
+}
+
+/* Styling for images inside the footer */
+footer img {
+    height: 25px;
+    margin-left: 10px;
+}
+
+/* Styling for images inside the navbar */
+nav img {
+    height: 30px;
+}
+
+/* Styling for the main content section, aligning it with the edges of the navbar and footer */
+main {
+    padding: 0 19rem;
+    box-sizing: border-box;
+    background-color: #DDF2FD;
+}
+
+/* Adjusting styling for header */
+h1 {
+    font-size: 5vmax;
+    margin-top: 10vh;
+}
+
+/* Styling for the hero section with a grid layout */
+.herogrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh 1fr;
+}
+
+/* Styling for the intro section within the hero */
+.intro {
+    grid-row: span 2;
+}
+
+/* Button Styling */
+.githubbutton,
+.linkedinbutton {
+    background-color: #427D9D;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: rgba(1, 60, 136, .5) 0 -1px 3px 0 inset, rgba(0, 44, 97, .1) 0 3px 6px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 80px;
+    touch-action: manipulation;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+}
+
+/* Making the linkedin button stand out more */
+.linkedinbutton {
+    background-color: #9BBEC8;
+    box-shadow: rgba(22, 72, 99, .5) 0 -1px 3px 0 inset, rgba(22, 72, 99, .1) 0 3px 6px 0;
+    ;
+}
+
+.githubbutton:hover {
+    background-color: #164863;
+    transform: translateY(-2px);
+}
+
+/* having the hover color be different */
+.linkedinbutton:hover {
+    background-color: #427D9D;
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+
+    .githubbutton,
+    .linkedinbutton {
+        padding: 16px 44px;
+        min-width: 150px;
+    }
+}
+
+/* Styling the introduction paragraph */
+.intro p {
+    font-size: 2.5vh;
+    margin: 6rem 0;
+}
+
+/* Creating Resume Grid */
+.resumegrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Fitting timeline img */
+.resume img {
+    height: 75vh;
+    width: 40vh;
+    margin-top: 70px;
+}
+
+/* Fitting timeline img */
+.skills h2,
+.relinfo h2 {
+    margin: 0;
+    font-size: 4vh;
+}
+
+/* changing the skills font size */
+.skills>ul>li {
+    font-size: 3.5vh;
+}
+
+/* formatting for a proper disclaimer on skills */
+.skills p {
+    font-style: italic;
+}
+
+/* making a grid that autofills when new divs are added */
+.expgrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+}
+
+/* Styling for experience h2 */
+.exptitle {
+    text-align: center;
+    font-size: 5vh;
+}
+
+/* Styling for experience h2 */
+.placeholderbox {
+    width: 250px;
+    height: 250px;
+    background-color: grey;
+}
+
+/* Centering the title of project and its preview box */
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/* Moving the p element in the bootstrap code up on the page */
+.move-up {
+    margin-top: 16vh;
+}
+
+/* Making the question bold */
+span {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 0 1rem;
+    }
+
+    nav {
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .navbar div {
+        display: none;
+    }
+}
